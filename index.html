@@ -6,12 +6,14 @@
     <title>kanban</title>
   </head>
 
-  <body class="font-[Plus Jakarta Sans] text-[#000112] bg-[#FFFFFF]">
+  <body class="font-[Plus Jakarta Sans] text-[#000112] bg-[#F4F7FD]">
     <!-- Navigation Sidebar: Contains the logo, navigation links for boards, and theme toggle. -->
-    <nav>
-      <div>
-        <img src="assets/logo-light.svg" alt="kanban logo" />
-        <h4>ALL BOARDS (1)</h4>
+    <nav
+      class="hidden md:flex flex-col md:w-64 bg-[#ffffff] border-r border-[#E4EBFA] px-6 py-7 h-screen fixed"
+    >
+      <div class="space-y-6">
+        <img src="assets/logo-light.svg" alt="kanban logo" class="h-6">
+        <h4 class="">ALL BOARDS (1)</h4>
         <button>Launch Career</button>
       </div>
     </nav>
@@ -19,8 +21,8 @@
     <!-- Main Layout: Header with board title, add task button, and main content area for task columns. -->
     <div>
       <header>
-        <div >
-          <h2 class=>Launch Career</h2>
+        <div>
+          <h2 class="">Launch Career</h2>
         </div>
       </header>
 
@@ -29,8 +31,7 @@
           <!-- Task Columns: Display tasks grouped by status (TODO, DOING, DONE). -->
           <div>
             <div>
-              <span></span>
-              <h4>TODO</h4>
+              <h4><span>🔵</span>TODO</h4>
             </div>
             <!-- Tasks container for TODO -->
             <div>
@@ -41,8 +42,7 @@
           <!-- DOING Column -->
           <div>
             <div>
-              <span></span>
-              <h4>DOING</h4>
+              <h4><span>🟣</span> DOING</h4>
             </div>
             <!-- Tasks container for DOING -->
             <div>
@@ -52,9 +52,8 @@
           </div>
           <!-- DONE Column -->
           <div>
-            <div>
-              <span></span>
-              <h4>DONE</h4>
+            <div class="">
+              <h4><span>🟢</span>DONE</h4>
             </div>
             <!-- Tasks container for DONE -->
             <div>
