@@ -4,117 +4,66 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Kanaban</title>
+    <title>Kanban</title>
   </head>
-  <body class="font-[plus Jakarta sans] text-[#000112] bg-[#F4F7FD]">
-    <!--Side bar: Hidden on mobile shows on md+-->
-    <nav
-      class="hidden md:flex flex-col md:w-[250px] bg-[#FFFFFF] border-r border-[#E4EBFA] p-[24px] h-screen fixed"
-    >
-      <img
-        src="assets/logo-light.svg"
-        alt="kanban"
-        class="h-[24px] mb-[32px] sm:shown"
-      />
-      <img
-        src="assets/favicon.svg"
-        alt="kanban icon"
-        class="h-[24px] mb-[32px] md:hidden"
-      />
-      <h4
-        class="text-xs font-semibold tracking-wider text-[#828FA3] uppercase mb-4"
-      >
-        ALL BOARDS(1)
-      </h4>
-      <button
-        class="bg-[#635FC7] hover:bg-[#A8A4FF] transition text-white py-[8px] px-[16px] rounded-r-[30px] text-lg font-medium w-full text-center"
-      >
-        Launch Career
-      </button>
-    </nav>
-    <!--end of the sidebar-->
-
-    <!--Main content-->
-    <div class="md:ml-[250px] sm:p-[24px] md:p-[36px] lg:p-[48px]">
-      <!--Header-->
-      <header
-        class="mb-[24px] sm:mb-[36px] flex flex-wrap items-center justify-between gap-[16px] bg-[#FFFFFF] ml-[-100px] mt-[-50px] p-[60px]"
-      >
-        <h2
-          class="text-[24px] line-height-[30px] font-bold sm:text-2xl text-[#000112]"
-        >
+  <body class="font-[Plus Jakarta Sans] text-[#000112] bg-[#F4F7FD] min-h-screen">
+    <div class="flex min-h-screen">
+      <!-- Sidebar -->
+      <nav class="hidden md:flex flex-col w-[250px] bg-white border-r border-[#E4EBFA] p-6">
+        <img src="assets/logo-light.svg" alt="kanban" class="h-[25px] w-auto mb-8" />
+        <h4 class="text-xs font-semibold tracking-[2.4px] text-[#828FA3] uppercase mb-4">ALL BOARDS (1)</h4>
+        <button class="bg-[#635FC7] hover:bg-[#A8A4FF] text-white font-bold py-2 px-4 rounded-tr-full rounded-br-full">
           Launch Career
-        </h2>
-      </header>
-      <!--End of header-->
+        </button>
+      </nav>
 
-      <!--Kanban columns-->
-      <main class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!--TODO-->
-        <div>
-          <h4
-            class="text-sm font-bold tracking-wider text-[#828FA3] uppercase mb-[16px] flex items-center gap-[8px]"
-          >
-            <span>🔵</span>Todo
-          </h4>
-          <div class="spcace-y-[12px]">
-            <div
-              class="bg-[#FFFFFF] p-[24px] rounded-[30px] w-[250px] shadow-sm font-medium text-[#20212C]"
-            >
-              Launch Epic Career 🚀
-            </div>
-            <div
-              class="bg-[#FFFFFF] p-[24px] rounded-[30px] w-[250px] shadow-sm font-medium text-[#20212C] mt-[15px]"
-            >
-              Conquer React ♓
-            </div>
-            <div
-              class="bg-[#FFFFFF] p-[24px] rounded-[30px] w-[250px] shadow-sm font-medium text-[#20212C] mt-[15px]"
-            >
-              Understand Databases 👨‍💻
-            </div>
-            <div
-              class="bg-[#FFFFFF] p-[24px] rounded-[30px] w-[250px] shadow-sm font-medium text-[#20212C] mt-[15px]"
-            >
-              Crush Frameworks 🖼️
-            </div>
-          </div>
-        </div>
-        <!--End of TODO-->
+      <!-- Main content -->
+      <div class="flex-1 p-4 sm:p-6 md:p-8">
+        <!-- Mobile Header -->
+        <header class="mb-[24px] sm:mb-[36px] flex flex-wrap items-center justify-between gap-[16px] bg-[#FFFFFF] mr-[-50px] ml-[-30px] mt-[-50px] p-[60px] ">
+          <h2 class="text-xl font-bold">Launch Career</h2>
+        </header>
 
-        <!--DOING-->
-        <div>
-          <h4
-            class="text-sm font-bold tracking-wider text-[#828FA3] uppercase mb-[16px] flex items-center gap-[8px]"
-          >
-            <span>🟣</span>Doing
-          </h4>
-          <div class="spcace-y-[12px]">
-            <div
-              class="bg-[#FFFFFF] p-[24px] rounded-[30px] w-[250px] shadow-sm font-medium text-[#20212C]"
-            >
-              Matering JavaScript 🧙‍♂️
+        <!-- Kanban Board -->
+        <main class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Column -->
+          <section>
+            <h4 class="text-sm font-bold tracking-wider text-[#828FA3] uppercase mb-4 flex items-center gap-2">
+              <span>🔵</span> Todo
+            </h4>
+            <div class="space-y-3">
+              <div class="bg-white p-4 rounded-lg shadow">Launch Epic Career 🚀</div>
+              <div class="bg-white p-4 rounded-lg shadow">Conquer React ♓</div>
+              <div class="bg-white p-4 rounded-lg shadow">Understand Databases 👨‍💻</div>
+              <div class="bg-white p-4 rounded-lg shadow">Crush Frameworks 🖼️</div>
             </div>
-            <div
-              class="bg-[#FFFFFF] p-[24px] rounded-[30px] w-[250px] shadow-sm font-medium text-[#20212C] mt-[15px]"
-            >
-              Keep on Going 🏆
-            </div>
-          </div>
-        </div>
-        <!--End of DOING-->
+          </section>
 
-        <!--DONE-->
-        <div>
-      <h4 class="text-sm font-bold tracking-wider text-[#828FA3] uppercase mb-[16px] flex items-center gap-[8px]" ><span>🟢</span>done</h4>
-      <div class="spcace-y-[12px]">
-        <div class="bg-[#FFFFFF] p-[24px] rounded-[30px] w-[250px] shadow-sm font-medium text-[#20212C]">Build Portfolio Piece 🛠️</div>
-        <div class="bg-[#FFFFFF] p-[24px] rounded-[30px] w-[250px] shadow-sm font-medium text-[#20212C] mt-[15px]">Learn HTML </div>
-        <div class="bg-[#FFFFFF] p-[24px] rounded-[30px] w-[250px] shadow-sm font-medium text-[#20212C] mt-[15px]">Reading LMS Content 📖 </div>
-        <div class="bg-[#FFFFFF] p-[24px] rounded-[30px] w-[250px] shadow-sm font-medium text-[#20212C] mt-[15px]">Have Fun 🛝</div>
+          <!-- Column -->
+          <section>
+            <h4 class="text-sm font-bold tracking-wider text-[#828FA3] uppercase mb-4 flex items-center gap-2">
+              <span>🟣</span> Doing
+            </h4>
+            <div class="space-y-3">
+              <div class="bg-white p-4 rounded-lg shadow">Mastering JavaScript 🧙‍♂️</div>
+              <div class="bg-white p-4 rounded-lg shadow">Keep on Going 🏆</div>
+            </div>
+          </section>
+
+          <!-- Column -->
+          <section>
+            <h4 class="text-sm font-bold tracking-wider text-[#828FA3] uppercase mb-4 flex items-center gap-2">
+              <span>🟢</span> Done
+            </h4>
+            <div class="space-y-3">
+              <div class="bg-white p-4 rounded-lg shadow">Build Portfolio Piece 🛠️</div>
+              <div class="bg-white p-4 rounded-lg shadow">Learn HTML</div>
+              <div class="bg-white p-4 rounded-lg shadow">Reading LMS Content 📖</div>
+              <div class="bg-white p-4 rounded-lg shadow">Have Fun 🛝</div>
+            </div>
+          </section>
+        </main>
       </div>
-    </div>  
-      </main>
     </div>
   </body>
 </html>
