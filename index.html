@@ -1,45 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <script src="https://cdn.tailwindcss.com"></script>
-  <title>Kanaban</title>
-</head>
-<body class="font-[plus Jakarta sans] text-[#000112] bg-[#F4F7FD]">
-  <!--Side bar: Hidden on mobile shows on md+-->
-  <nav class="hidden md:flex flex-col md:w-[250px] bg-[#FFFFFF] border-r border-[#E4EBFA] p-[24px] h-screen fixed">
-    <img src="assets/logo-light.svg" alt="kanban" class="h-[24px] mb-[32px]">
-    <img src="assets/favicon.svg" alt="kanban icon"class="h-[24px] mb-[32px]">
-    <h4 class="text-xs font-semibold tracking-wider text-[#828FA3] uppercase mb-4">ALL BOARDS(1)</h4>
-    <button class="bg-[#635FC7] hover:bg-[#A8A4FF] transition text-white py-[8px] px-[16px] rounded-r-[30px] text-lg font-medium w-full text-center">Launch Career</button>
-  </nav>
-  <!--end of the sidebar-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Kanaban</title>
+  </head>
+  <body class="font-[plus Jakarta sans] text-[#000112] bg-[#F4F7FD]">
+    <!--Side bar: Hidden on mobile shows on md+-->
+    <nav
+      class="hidden md:flex flex-col md:w-[250px] bg-[#FFFFFF] border-r border-[#E4EBFA] p-[24px] h-screen fixed"
+    >
+      <img
+        src="assets/logo-light.svg"
+        alt="kanban"
+        class="h-[24px] mb-[32px]"
+      />
+      <img
+        src="assets/favicon.svg"
+        alt="kanban icon"
+        class="h-[24px] mb-[32px]"
+      />
+      <h4
+        class="text-xs font-semibold tracking-wider text-[#828FA3] uppercase mb-4"
+      >
+        ALL BOARDS(1)
+      </h4>
+      <button
+        class="bg-[#635FC7] hover:bg-[#A8A4FF] transition text-white py-[8px] px-[16px] rounded-r-[30px] text-lg font-medium w-full text-center"
+      >
+        Launch Career
+      </button>
+    </nav>
+    <!--end of the sidebar-->
 
+    <!--Main content-->
+    <div class="md:ml-[250px] sm:p-[24px] md:p-[36px] lg:p-[48px]">
+      <!--Header-->
+      <header
+        class="mb-[24px] sm:mb-[36px] flex flex-wrap items-center justify-between gap-[16px] bg-[#FFFFFF] ml-[-100px] mt-[-50px] p-[60px]"
+      >
+        <h2
+          class="text-[24px] line-height-[30px] font-bold sm:text-2xl text-[#000112]"
+        >
+          Launch Career
+        </h2>
+      </header>
+      <!--End of header-->
 
-  <!--Main content-->
-  <div class="md:ml-[250px] sm:p-[24px] md:p-[36px] lg:p-[48px]">
-    <!--Header-->
-    <header class="mb-[24px] sm:mb-[36px] flex flex-wrap items-center justify-between gap-[16px] bg-[#FFFFFF] ml-[-100px] mt-[-50px] p-[60px]">
-      <h2 class="text-[24px] line-height-[30px] font-bold sm:text-2xl text-[#000112]">Launch Career</h2>
-    </header>
-    <!--End of header-->
+      <!--Kanban columns-->
+      <main class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!--TODO-->
+        <div>
+          <h4
+            class="text-sm font-bold tracking-wider text-[#828FA3] uppercase mb-[16px] flex items-center gap-[8px]"
+          >
+            <span>🔵</span>Todo
+          </h4>
+          <div class="spcace-y-[12px]">
+            <div
+              class="bg-[#FFFFFF] p-[24px] rounded-[30px] w-[250px] shadow-sm font-medium text-[#20212C]"
+            >
+              Launch Epic Career 🚀
+            </div>
+            <div
+              class="bg-[#FFFFFF] p-[24px] rounded-[30px] w-[250px] shadow-sm font-medium text-[#20212C] mt-[15px]"
+            >
+              Conquer React ♓
+            </div>
+            <div
+              class="bg-[#FFFFFF] p-[24px] rounded-[30px] w-[250px] shadow-sm font-medium text-[#20212C] mt-[15px]"
+            >
+              Understand Databases 👨‍💻
+            </div>
+            <div
+              class="bg-[#FFFFFF] p-[24px] rounded-[30px] w-[250px] shadow-sm font-medium text-[#20212C] mt-[15px]"
+            >
+              Crush Frameworks 🖼️
+            </div>
+          </div>
+        </div>
+        <!--End of TODO-->
 
-   <!--Kanban columns--> 
-   <main class="flex flex-col gap-[24px] sm:grid sm:grid-col-2 lg:grid-col-3">
+        <!--DOING-->
+        <div>
+          <h4
+            class="text-sm font-bold tracking-wider text-[#828FA3] uppercase mb-[16px] flex items-center gap-[8px]"
+          >
+            <span>🟣</span>Doing
+          </h4>
+          <div class="spcace-y-[12px]">
+            <div
+              class="bg-[#FFFFFF] p-[24px] rounded-[30px] w-[250px] shadow-sm font-medium text-[#20212C]"
+            >
+              Matering JavaScript 🧙‍♂️
+            </div>
+            <div
+              class="bg-[#FFFFFF] p-[24px] rounded-[30px] w-[250px] shadow-sm font-medium text-[#20212C] mt-[15px]"
+            >
+              Never giving up 💪
+            </div>
+          </div>
+        </div>
+        <!--End of DOING-->
 
-    <!--TODO-->
-    <div>
-      <h4 class="text-sm font-bold tracking-wider text-[#828FA3] uppercase mb-[16px] flex items-center gap-[8px]" ><span>🔵</span>Todo</h4>
-      <div class="spcace-y-[12px]">
-        <div class="bg-[#FFFFFF] p-[24px] rounded-[30px] w-[250px] shadow-sm font-medium text-[#20212C]">Launch Epic Career 🚀</div>
-        <div class="bg-[#FFFFFF] p-[24px] rounded-[30px] w-[250px] shadow-sm font-medium text-[#20212C] mt-[15px]">Conquer React ♓ </div>
-        <div class="bg-[#FFFFFF] p-[24px] rounded-[30px] w-[250px] shadow-sm font-medium text-[#20212C] mt-[15px]">Understand Databases 👨‍💻 </div>
-        <div class="bg-[#FFFFFF] p-[24px] rounded-[30px] w-[250px] shadow-sm font-medium text-[#20212C] mt-[15px]">Crush Frameworks 🖼️</div>
-      </div>
+        <!--DONE-->
+        
+      </main>
     </div>
-
-   </main>
-  </div>
-</body>
+  </body>
 </html>
